@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: servisflow-app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_PATH=/app/data/servisflow.db
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Veritabanının kalıcı olması için volume eşleme
+      - servisflow_data:/app/data
+      # Geliştirme anında kod değişikliklerini anında görmek için isteğe bağlı bağlama:
+      - ./app:/app/app:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+
+volumes:
+  servisflow_data:
+    driver: local

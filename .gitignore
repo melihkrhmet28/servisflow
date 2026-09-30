@@ -1,0 +1,49 @@
+# ==========================================
+# ServisFlow - .gitignore Yapılandırması
+# ==========================================
+
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Sanal Ortamlar (Virtual Environments)
+venv/
+env/
+ENV/
+.env
+.venv/
+env.bak/
+venv.bak/
+
+# Veritabanı ve Yerel Test Verileri
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Test ve Kapsam Dosyaları
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE ve Editör Ayarları
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker ve İşletim Sistemi Kalıntıları
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.log
