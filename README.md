@@ -1,14 +1,16 @@
 # ServisFlow - Akıllı Randevu ve Talep Yönetim Otomasyonu
 
-🔗 **Canlı Demo:** [https://servisflow.onrender.com]
-📚 **Canlı API Dokümantasyonu (Swagger):** [https://servisflow.onrender.com/docs]
+- **Canlı Demo:** [servisflow.onrender.com](https://servisflow.onrender.com)
+- **API Dokümantasyonu (Swagger):** [servisflow.onrender.com/docs](https://servisflow.onrender.com/docs)
+- **Sağlık Kontrolü (Healthcheck):** [servisflow.onrender.com/health](https://servisflow.onrender.com/health)
 
+---
 
 ServisFlow, hizmet sektöründeki KOBİ'ler (oto servisler, klinikler, güzellik merkezleri, danışmanlar vb.) için randevu çakışmalarını engelleyen, müşteri bildirimlerini otomatikleştiren ve 7/24 talep toplayan modern bir SaaS landing page ve arka plan altyapısıdır.
 
 ---
 
-## 🚀 Teknoloji Yığını
+## Teknoloji Yığını
 
 - **Backend:** Python 3.11+, FastAPI, Pydantic v2
 - **Veritabanı:** SQLite3 (Parametreli SQL injection korumalı mimari)
@@ -18,7 +20,7 @@ ServisFlow, hizmet sektöründeki KOBİ'ler (oto servisler, klinikler, güzellik
 
 ---
 
-## 📁 Proje Dizin Yapısı
+## Proje Dizin Yapısı
 
 ```text
 servisflow/
@@ -40,7 +42,7 @@ servisflow/
 
 ---
 
-## ⚡ Hızlı Başlangıç
+## Hızlı Başlangıç
 
 ### Yöntem 1: Docker Compose ile Çalıştırma (Önerilen)
 
@@ -92,7 +94,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ---
 
-## 🔌 API Dokümantasyonu ve Endpoint'ler
+## API Dokümantasyonu ve Endpoint'ler
 
 FastAPI tarafından otomatik üretilen etkileşimli Swagger dokümantasyonuna **`http://localhost:8000/docs`** adresinden erişebilirsiniz.
 
@@ -162,7 +164,7 @@ FastAPI tarafından otomatik üretilen etkileşimli Swagger dokümantasyonuna **
 
 ---
 
-## 🧪 Test ve Doğrulama Adımları
+## Test ve Doğrulama Adımları
 
 ### cURL ile Başarılı Talep Testi
 ```bash
@@ -190,7 +192,7 @@ curl -X POST "http://localhost:8000/api/requests" \
 
 ---
 
-## 🛡️ Güvenlik ve Erişilebilirlik (a11y) Özellikleri
+## Güvenlik ve Erişilebilirlik (a11y) Özellikleri
 
 1. **SQL Injection Koruması:** Veritabanına yazılan tüm girdiler SQLite `?` parametreli sorguları ile güvenli şekilde izole edilir.
 2. **XSS Koruması:** İstemci tarafında `escapeHtml` fonksiyonu ile dinamik içerikler sterilize edilir.
